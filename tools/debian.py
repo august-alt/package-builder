@@ -1,6 +1,9 @@
 import os
 import sys
 import urllib.request
+import tarfile
+
+from subprocess import Popen
 
 class DebianPackage(object):
     def __init__(self, path):
@@ -28,7 +31,7 @@ class DebianPackage(object):
         pass
 
     def build_package(self):
-        if (not self.tar_archive):
+        if not self.tar_archive:
             return False
 
         self.__create_build_dir()
@@ -48,15 +51,20 @@ class DebianPackage(object):
         pass
 
     def __extract_tarball(self):
-        pass
+        tar = tarfile.open(os.path.join(self.package_path ,self.tar_archive))
+        tar.extractall()
+        tar.close()
 
     def __copy_debian(self):
         pass
 
     def __build(self):
-        pass
+        builder = "dpkg-buildpackage -us -uc";
 
-def main(self):
+        p = Popen(builder, self.archive_dir)
+        return p.wait()
+
+def main():
     if sys.argc < 2:
         print("Usage: {1} <package_path>".format(sys.argv[0]))
         return
@@ -71,6 +79,7 @@ def main(self):
         return
 
     package = DebianPackage(path)
-    if not package.build_package():
-        print("Error building package!")
+    sys.exit(package.build_package())
 
+if __name__ == "__main__":
+    main()
