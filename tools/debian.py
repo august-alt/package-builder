@@ -83,7 +83,7 @@ class DebianPackage(object):
         return p.wait()
 
 def main():
-    if sys.argc < 2:
+    if len(sys.argv) != 2:
         print("Usage: {1} <package_path>".format(sys.argv[0]))
         return
 
