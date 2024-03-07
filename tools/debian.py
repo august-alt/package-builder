@@ -2,8 +2,10 @@ import os
 import sys
 import urllib.request
 import tarfile
+import logging
+import subprocess
 
-from subprocess import Popen
+from shutil import copytree
 
 class DebianPackage(object):
     def __init__(self, path):
@@ -12,7 +14,6 @@ class DebianPackage(object):
 
         self.package_url = None
         self.tar_archive = None
-        self.archive_dir = None
 
         self.read_package_url()
         self.read_changelog()
@@ -48,20 +49,24 @@ class DebianPackage(object):
         os.mkdir(self.build_path)
 
     def __fetch_tarball(self):
-        pass
+        urllib.request.urlretrieve(self.package_url, self.tar_archive)
 
     def __extract_tarball(self):
-        tar = tarfile.open(os.path.join(self.package_path ,self.tar_archive))
-        tar.extractall()
-        tar.close()
+        retcode = subprocess.call(['tar', '-xvf', self.tar_archive, '-C', self.build_path])
+        if retcode == 0:
+            print("Extracted successfully")
+        else:
+            raise IOError('tar exited with code %d' % retcode)
 
     def __copy_debian(self):
-        pass
+        source_dir = os.path.join(self.package_path, "debian")
+        target_dir = os.path.join(self.build_path, "debian")
+        copytree(source_dir ,target_dir)
 
     def __build(self):
         builder = "dpkg-buildpackage -us -uc";
 
-        p = Popen(builder, self.archive_dir)
+        p = subprocess.Popen(builder, self.build_path)
         return p.wait()
 
 def main():
