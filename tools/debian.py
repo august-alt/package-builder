@@ -77,10 +77,11 @@ class DebianPackage(object):
         copytree(source_dir ,target_dir)
 
     def __build(self):
-        builder = "dpkg-buildpackage -us -uc";
-
-        p = subprocess.Popen(builder, self.build_path)
-        return p.wait()
+        retcode = subprocess.call(['dpkg-buildpackage', '-us', '-uc'], cwd=self.build_path)
+        if retcode == 0:
+            print("Build successful")
+        else:
+            raise IOError('dpkg-buildpackage exited with code %d' % retcode)
 
 def main():
     if len(sys.argv) != 2:
