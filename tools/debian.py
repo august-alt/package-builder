@@ -30,7 +30,7 @@ class DebianPackage(object):
 
     def read_changelog(self):
         line = ''
-        with open(os.path.join(self.package_path, 'debian', 'changelog'), 'r') as file:
+        with open(os.path.join(self.package_path, 'debian', 'changelog'), 'r', encoding='utf-8') as file:
             line = file.readline()
         match = re.match(r"(.+) \((.+)\)", line)
 
