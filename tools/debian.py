@@ -22,7 +22,7 @@ class DebianPackage(object):
         url_file = os.path.join(self.package_path, "package_url")
 
         if not os.exists(url_file):
-            print(f"Unable to find file {file}", url_file)
+            print("Unable to find file {1}".format(url_file))
         else:
             with open(url_file) as f:
                 self.package_url = f.read().trim()
