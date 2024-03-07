@@ -1,0 +1,234 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: xsd
+Upstream-Contact: xsd-user Maillist <xsd-users@codesynthesis.com>
+Source: <http://www.codesynthesis.com/download/xsd/3.2/xsd-3.2.0.2+dep.tar.bz2>
+
+Files: *
+Copyright: Copyright (©) 2005-2014  CODE SYNTHESIS TOOLS CC
+License: GPL-2+ and FLOSS
+
+Files: xsd/doc/custom-literals.xsd
+       xsd/examples/cxx/*/driver.cxx
+       xsd/examples/cxx/parser/generated/library.*
+       xsd/examples/cxx/parser/hello/hello.*
+       xsd/examples/cxx/parser/library/library*.*
+       xsd/examples/cxx/parser/mixed/anchor.hxx
+       xsd/examples/cxx/parser/mixed/text.*
+       xsd/examples/cxx/parser/mixin/types.hxx
+       xsd/examples/cxx/parser/mixin/instance.xml
+       xsd/examples/cxx/parser/mixin/schema.*
+       xsd/examples/cxx/parser/multiroot/balance.xml
+       xsd/examples/cxx/parser/multiroot/deposit.xml
+       xsd/examples/cxx/parser/multiroot/protocol*.*
+       xsd/examples/cxx/parser/multiroot/withdraw.xml
+       xsd/examples/cxx/parser/performance/test.xsd
+       xsd/examples/cxx/parser/performance/time.*
+       xsd/examples/cxx/parser/polymorphism/supermen*.*
+       xsd/examples/cxx/parser/polyroot/*.xml
+       xsd/examples/cxx/parser/polyroot/supermen*.*
+       xsd/examples/cxx/parser/wildcard/email.*
+       xsd/examples/cxx/tree/binary/boost/boost*.*
+       xsd/examples/cxx/tree/binary/boost/library.*
+       xsd/examples/cxx/tree/binary/cdr/library.*
+       xsd/examples/cxx/tree/binary/xdr/library.*
+       xsd/examples/cxx/tree/caching/library.*
+       xsd/examples/cxx/tree/compression/library.*
+       xsd/examples/cxx/tree/compression/compressed*.*
+       xsd/examples/cxx/tree/custom/calendar/calendar.*
+       xsd/examples/cxx/tree/custom/calendar/xml-schema-custom.*
+       xsd/examples/cxx/tree/custom/comments/dom-parse.*
+       xsd/examples/cxx/tree/custom/comments/people.*
+       xsd/examples/cxx/tree/custom/comments/xml-schema-custom.*
+       xsd/examples/cxx/tree/custom/contacts/contacts*.*
+       xsd/examples/cxx/tree/custom/double/double-custom.*
+       xsd/examples/cxx/tree/custom/double/order.xsd
+       xsd/examples/cxx/tree/custom/mixed/people*.*
+       xsd/examples/cxx/tree/custom/taxonomy/people*.*
+       xsd/examples/cxx/tree/custom/wildcard/wildcard*.*
+       xsd/examples/cxx/tree/embedded/library.*
+       xsd/examples/cxx/tree/embedded/grammar-input-stream.*
+       xsd/examples/cxx/tree/embedded/xsdbin.cxx
+       xsd/examples/cxx/tree/hello/hello.*
+       xsd/examples/cxx/tree/library/library.*
+       xsd/examples/cxx/tree/messaging/*.xml
+       xsd/examples/cxx/tree/messaging/*.cxx
+       xsd/examples/cxx/tree/messaging/*.hxx
+       xsd/examples/cxx/tree/messaging/protocol.xsd
+       xsd/examples/cxx/tree/mixed/text.*
+       xsd/examples/cxx/tree/multiroot/*.xml
+       xsd/examples/cxx/tree/multiroot/dom-parse.*
+       xsd/examples/cxx/tree/multiroot/protocol.xsd
+       xsd/examples/cxx/tree/performance/parsing.cxx
+       xsd/examples/cxx/tree/performance/serialization.cxx
+       xsd/examples/cxx/tree/performance/test.xsd
+       xsd/examples/cxx/tree/performance/time.*
+       xsd/examples/cxx/tree/polymorphism/supermen.*
+       xsd/examples/cxx/tree/streaming/parser.*
+       xsd/examples/cxx/tree/streaming/position.*
+       xsd/examples/cxx/tree/streaming/serializer.*
+       xsd/examples/cxx/tree/wildcard/email.*
+       xsd/examples/cxx/tree/xpath/dom-parse.*
+       xsd/examples/cxx/tree/xpath/driver.cxx
+       xsd/examples/cxx/tree/xpath/people.*
+Copyright: Boris Kolpackov <boris@codesynthesis.com>
+License: public-domain
+  In xsd/LICENSE all files are published under GPL-2
+
+Files: xsd/doc/cxx/tree/guide/cxx-tree-guide.*
+       xsd/doc/cxx/tree/guide/index.xhtml
+       xsd/doc/cxx/tree/guide/guide.html2ps
+       xsd/doc/cxx/tree/manual/cxx-tree-manual.*
+       xsd/doc/cxx/tree/manual/index.xhtml
+       xsd/doc/cxx/tree/manual/manual.html2ps
+       xsd/doc/cxx/parser/guide/cxx-parser-guide.*
+       xsd/doc/cxx/parser/guide/index.xhtml
+       xsd/doc/cxx/parser/guide/guide.html2ps
+       xsd/doc/xsd.*
+Copyright: 2005-2014 CODE SYNTHESIS TOOLS CC
+License: GFDL-1.2
+
+Files: debian/*
+Copyright: 2008      Raphael Bossek <bossekr@debian.org>
+           2014-2016 Jörg Frings-Fürst <debian@jff.email>
+License: GPL-1+
+
+
+License: GFDL-1.2
+ Permission is granted to copy, distribute and/or modify this document
+ under the terms of the GNU Free Documentation License, Version 1.2
+ as published by the Free Software Foundation; with no Invariant Sections, no
+ Front-Cover Texts, and no Back-Cover Texts.
+ .
+ On Debian systems, the complete text of the GNU Free Documentation License
+ version 1.2 can be found in "/usr/share/common-licenses/GFDL-1.2".
+
+License: GPL-1+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 1 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 1 can be found in the file
+ `/usr/share/common-licenses/GPL-1'.
+
+License: GPL-2+ and FLOSS
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+ .
+ Free/Libre and Open Source Software ("FLOSS")
+ °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+    1. Intent
+ .
+    We want specified Free/Libre and Open Source Software ("FLOSS")
+    to be able to use the specified GPL-licensed xsd runtime library
+    and xsd generated code (collectively called the "Program") despite
+    the fact that not all FLOSS licenses are compatible with version 2
+    of the GNU General Public License (the "GPL").
+ .
+    It is our intent to allow distribution of the entire Derivative
+    Work (including the Program) under one or more of the FLOSS licenses
+    listed in section 3 (section 2.a). It is also our intent to disallow
+    simple relicensing of the Program for the sole purpose of using it in
+    proprietary applications (section 2.b and 2.c). As an example, consider
+    two hypothetical scenarios:
+ .
+     a) You created a program that uses the xsd generated code and the xsd
+        runtime library to access information in XML instance documents.
+        Your program performs useful computations based on this information
+        (sections 2.b and 2.c are satisfied). You distribute your program,
+        including the xsd generated code and the xsd runtime library under
+        the BSD license and make it available at no charge to all third
+        parties (section 2.a is satisfied). Later you (or someone else) may
+        choose to base their proprietary application on your code since the
+        BSD license does not prohibit it.
+ .
+        This scenario falls under this FLOSS Exception.
+ .
+     b) You created a library that uses the xsd generated code and the xsd
+        runtime library to access information in XML instance documents. You
+        did not add to the library any other useful code that uses the xsd
+        generated code or the xsd runtime library (neither section 2.b nor
+        2.c is satisfied). You distribute your library, including the xsd
+        generated code and the xsd runtime library under the BSD license and
+        make it available at no charge to all third parties (section 2.a
+        is satisfied). Later you base your proprietary application on this
+        library since the BSD license does not prohibit it.
+ .
+        This scenario does not fall under this FLOSS Exception (neither
+        section 2.b nor 2.c is satisfied). You created the library for the
+        sole purpose of making the xsd generated code and the xsd runtime
+        library available to your proprietary application.
+ .
+    2. Legal Terms and Conditions
+ .
+    As a special exception to the terms and conditions of version 2 of
+    the GPL you are free to distribute a verbatim copy of the Program
+    as part of the Derivative Work that is formed from the Program or
+    any part thereof and one or more works (each, a "FLOSS Work") as
+    long as you also meet all of these conditions:
+ .
+      a) You must cause the Derivative Work that in whole or in part
+         contains or is derived from the Program or any part thereof,
+         to be licensed as a whole at no charge to all third parties
+         under the terms of one or more of the licenses listed in
+         section 3.
+ .
+      b) The Derivative Work should contain one or more FLOSS Work that
+         can be reasonably considered as derived from the Program or some
+         part thereof.
+ .
+      c) The Derivative Work should not contain any part of the Program
+         that cannot be reasonably considered as a base of one or more
+         FLOSS Work.
+ .
+    3. FLOSS License List
+ .
+      a) Any license listed in the "GPL-Compatible Free Software Licenses"
+         and the "GPL-Incompatible Free Software Licenses" sections of the
+         License List as published by the Free Software Foundation (FSF):
+ .
+         http://www.gnu.org/licenses/license-list.html
+ .
+    4. Definitions
+ .
+    Terms used, but not defined, herein shall have the meaning
+    provided in the GPL.
+ .
+    Derivative Work means a derivative work under copyright law.
+ .
+    5. Applicability
+ .
+    You may choose to redistribute a copy of the Program exclusively under
+    the terms of the GPL by removing the FLOSS Exception notice from that
+    copy of the Program.

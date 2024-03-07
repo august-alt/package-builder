@@ -1,0 +1,5 @@
+0100-C++Parser_Expat_support.patch
+0001-xsd_xsdcxx-rename.patch
+0700_hurd_PATH_MAX.patch
+0105-Fix_path_handling_bug.patch
+0110-xerces-c3.2.patch

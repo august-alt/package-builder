@@ -1,0 +1,7 @@
+XSD for Debian
+------------------
+
+Due to name conflicts with mono-1.0-devel the `xsd` application was renamed
+to `xsdcxx`. The output of `xsdcxx` is the same, including the directories.
+
+ -- Raphael Bossek <bossekr@debian.org>  Sat, 16 Feb 2008 19:26:38 +0100

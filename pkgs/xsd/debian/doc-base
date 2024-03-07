@@ -1,0 +1,14 @@
+Document: xsdcxx
+Title: xsd Documentation
+Section: Programming/C++
+
+Format: PDF
+Files: /usr/share/doc/xsdcxx/cxx/tree/manual/cxx-tree-manual.pdf.gz
+ /usr/share/doc/xsdcxx/cxx/tree/guide/cxx-tree-guide.pdf.gz
+ /usr/share/doc/xsdcxx/cxx/parser/guide/cxx-parser-guide.pdf.gz
+
+Format: PostScript
+Files: /usr/share/doc/xsdcxx/cxx/tree/manual/cxx-tree-manual.ps.gz
+ /usr/share/doc/xsdcxx/cxx/tree/guide/cxx-tree-guide.ps.gz
+ /usr/share/doc/xsdcxx/cxx/parser/guide/cxx-parser-guide.ps.gz
+

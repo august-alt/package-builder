@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DH_OPTIONS
+
+#
+# Hardening
+#
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+export verbose=1
+
+%:
+	dh $@ --parallel
+
+override_dh_clean:
+	rm -f $(CURDIR)/libcult/build/system/configuration-dynamic.make
+	make xsd_clean_gen=n clean
+	dh_clean
+
+override_dh_auto_install:
+	MAKEFLAGS="$$MAKEFLAGS install_prefix=$(CURDIR)/debian/xsdcxx/usr" $(MAKE) -C $(CURDIR)/ -f makefile install
+	mv $(CURDIR)/debian/xsdcxx/usr/share/doc/xsd $(CURDIR)/debian/xsdcxx/usr/share/doc/xsdcxx
+	mv $(CURDIR)/debian/xsdcxx/usr/bin/xsd $(CURDIR)/debian/xsdcxx/usr/bin/xsdcxx
+	mv $(CURDIR)/debian/xsdcxx/usr/share/man/man1/xsd.1 $(CURDIR)/debian/xsdcxx/usr/share/man/man1/xsdcxx.1
+	rm -rf $(CURDIR)/debian/xsdcxx/usr/share/doc/libxsd
+	find $(CURDIR)/debian/xsdcxx \( -name "COPYRIGHT*" -o -name "FLOSSE*" -o -name "LICENSE*" -o -name "GPL*" \) -exec rm -v {} \;
+
+override_dh_install:
+	dh_install
+	install -D -m 644 debian/ubuntu/apport-hook.py $(CURDIR)/debian/xsdcxx/usr/share/apport/package-hooks/source_xsdcxx.py
