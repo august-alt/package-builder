@@ -33,7 +33,7 @@ class DebianPackage(object):
         line = ''
         with open(os.path.join(self.package_path, 'debian', 'changelog'), 'r', encoding='utf-8') as file:
             line = file.readline()
-        match = re.match(r"(.+) \((.+)\)", line)
+        matches = re.match(r"(.+) \((.+)\)", line)
 
         name = matches.group(1)
         version = matches.group(2)
