@@ -21,7 +21,7 @@ class DebianPackage(object):
     def read_package_url(self):
         url_file = os.path.join(self.package_path, "package_url")
 
-        if not os.exists(url_file):
+        if not os.path.exists(url_file):
             print("Unable to find file {1}".format(url_file))
         else:
             with open(url_file) as f:
@@ -56,7 +56,7 @@ class DebianPackage(object):
         return self.__build()
 
     def __create_build_dir(self):
-        if os.exists(self.build_path):
+        if os.path.exists(self.build_path):
             return
 
         os.mkdir(self.build_path)
