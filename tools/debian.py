@@ -65,7 +65,7 @@ class DebianPackage(object):
         urllib.request.urlretrieve(self.package_url, self.tar_archive)
 
     def __extract_tarball(self):
-        retcode = subprocess.call(['tar', '-xvf', self.tar_archive, '-C', self.build_path])
+        retcode = subprocess.call(['tar', '-xvf', self.tar_archive, '-C', self.build_path, '--strip-components=1'])
         if retcode == 0:
             print("Extracted successfully")
         else:
