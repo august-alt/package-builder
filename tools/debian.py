@@ -26,7 +26,6 @@ class DebianPackage(object):
         else:
             with open(url_file) as f:
                 self.package_url = f.read().strip()
-                close(url_file)
                 print('Got package_url {1}'.format(self.package_url))
 
     def read_changelog(self):
