@@ -39,7 +39,7 @@ class DebianPackage(object):
         version = matches.group(2)
 
         archive_suffix = 'bz2'
-        if self.package_url.ends_with('gz'):
+        if self.package_url.endswith('gz'):
             archive_suffix = 'gz'
         self.tar_archive = os.path.join(self.package_path, '{}-{}.orig.tar.{}'.format(name, version, archive_suffix))
         print('Got archive path {}'.format(self.tar_archive))
