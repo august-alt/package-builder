@@ -7,6 +7,7 @@ import logging
 import subprocess
 
 from shutil import copytree
+from urllib.parse import urlparse
 
 class DebianPackage(object):
     def __init__(self, path):
@@ -63,6 +64,11 @@ class DebianPackage(object):
 
     def __fetch_tarball(self):
         urllib.request.urlretrieve(self.package_url, self.tar_archive)
+
+        parsed_url = urlparse(self.package_url)
+        filename = parsed_url.path.split('/')[-1]
+
+        shutil.copyfile(self.tar_archive, os.path.join(self.package_path, filename))
 
     def __extract_tarball(self):
         retcode = subprocess.call(['tar', '-xvf', self.tar_archive, '-C', self.build_path, '--strip-components=1'])
