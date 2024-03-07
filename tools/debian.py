@@ -9,7 +9,7 @@ from shutil import copytree
 
 class DebianPackage(object):
     def __init__(self, path):
-        self.build_path = None
+        self.build_path = os.path.join(path, "build")
         self.package_path = path
 
         self.package_url = None
@@ -27,9 +27,22 @@ class DebianPackage(object):
             with open(url_file) as f:
                 self.package_url = f.read().trim()
                 close(url_file)
+                print('Got package_url {1}'.format(self.package_url))
 
     def read_changelog(self):
-        pass
+        line = ''
+        with open(os.path.join(self.package_path, 'debian', 'changelog'), 'r') as file:
+            line = file.readline()
+        match = re.match(r"(.+) \((.+)\)", line)
+
+        name = matches.group(1)
+        version = matches.group(2)
+
+        archive_suffix = 'bz2'
+        if self.package_url.ends_with('gz'):
+            archive_suffix = 'gz'
+        self.tar_archive = os.path.join(self.package_path, '{1}-{2}.orig.tar.{3}'.format(name, version, archive_suffix))
+        print('Got archive path {1}'.format(self.tar_archive))
 
     def build_package(self):
         if not self.tar_archive:
