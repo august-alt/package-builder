@@ -25,7 +25,7 @@ class DebianPackage(object):
             print("Unable to find file {1}".format(url_file))
         else:
             with open(url_file) as f:
-                self.package_url = f.read().trim()
+                self.package_url = f.read().strip()
                 close(url_file)
                 print('Got package_url {1}'.format(self.package_url))
 
