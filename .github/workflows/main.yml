@@ -1,0 +1,25 @@
+name: Build Packages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to GitHub Container Registry
+      run: |
+        docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.github_token }}
+
+    - name: Pull Docker image
+      run: docker pull ghcr.io/august-alt/external-docker-images-astra_2.12_x86-64:latest
+
+    - name: Run echo command in Docker container
+      run: docker run ghcr.io/august-alt/external-docker-images-astra_2.12_x86-64:latest echo "Hello, World!"
