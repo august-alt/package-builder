@@ -22,11 +22,11 @@ class DebianPackage(object):
         url_file = os.path.join(self.package_path, "package_url")
 
         if not os.path.exists(url_file):
-            print("Unable to find file {1}".format(url_file))
+            print("Unable to find file {}".format(url_file))
         else:
             with open(url_file) as f:
                 self.package_url = f.read().strip()
-                print('Got package_url {1}'.format(self.package_url))
+                print('Got package_url {}'.format(self.package_url))
 
     def read_changelog(self):
         line = ''
@@ -40,8 +40,8 @@ class DebianPackage(object):
         archive_suffix = 'bz2'
         if self.package_url.ends_with('gz'):
             archive_suffix = 'gz'
-        self.tar_archive = os.path.join(self.package_path, '{1}-{2}.orig.tar.{3}'.format(name, version, archive_suffix))
-        print('Got archive path {1}'.format(self.tar_archive))
+        self.tar_archive = os.path.join(self.package_path, '{}-{}.orig.tar.{}'.format(name, version, archive_suffix))
+        print('Got archive path {}'.format(self.tar_archive))
 
     def build_package(self):
         if not self.tar_archive:
@@ -83,13 +83,13 @@ class DebianPackage(object):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: {1} <package_path>".format(sys.argv[0]))
+        print("Usage: {} <package_path>".format(sys.argv[0]))
         return
 
     path = sys.argv[1]
 
     if not os.path.exists(path):
-        print("Given path {1} is invalid!".format(path))
+        print("Given path {} is invalid!".format(path))
 
     if not os.path.exists(os.path.join(path, "debian")):
         print("There is no debian folder in given path!")
