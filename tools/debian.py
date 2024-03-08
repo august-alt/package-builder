@@ -5,8 +5,8 @@ import urllib.request
 import tarfile
 import logging
 import subprocess
+import shutil
 
-from shutil import copytree
 from urllib.parse import urlparse
 
 class DebianPackage(object):
@@ -80,7 +80,7 @@ class DebianPackage(object):
     def __copy_debian(self):
         source_dir = os.path.join(self.package_path, "debian")
         target_dir = os.path.join(self.build_path, "debian")
-        copytree(source_dir ,target_dir)
+        shutil.copytree(source_dir ,target_dir)
 
     def __build(self):
         retcode = subprocess.call(['dpkg-buildpackage', '-us', '-uc'], cwd=self.build_path)
