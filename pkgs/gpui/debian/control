@@ -1,0 +1,9 @@
+Architecture: amd64
+Maintainer: august
+Package: gpui
+Version: 0.2.42
+Installed-Size: 26701
+Section: system
+Priority: optional
+Homepage: https://github.com/august-alt/gpui
+Description: GPUI — is an open source utility for group policy management.
