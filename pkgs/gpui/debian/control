@@ -1,9 +1,16 @@
-Architecture: amd64
-Maintainer: august
-Package: gpui
-Version: 0.2.42
-Installed-Size: 26701
+Source: gpui
+Maintainer: august <august@basealt.ru>
 Section: system
 Priority: optional
+Build-Depends: debhelper (>= 9)               
+Standards-Version: 4.1.4
+Vcs-Browser: https://github.com/august-alt/gpui
+Vcs-Git: git://git@github.com:august-alt/gpui.git
 Homepage: https://github.com/august-alt/gpui
+
+Package: gpui
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: 
 Description: GPUI — is an open source utility for group policy management.
