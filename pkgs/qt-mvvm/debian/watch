@@ -1,0 +1,3 @@
+version=v0.2
+https://github.com/august-alt/qt-mvvm/tags .*/archive/[a-z](\d\S*)\.tar\.gz
+
