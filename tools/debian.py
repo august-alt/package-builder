@@ -37,7 +37,7 @@ class DebianPackage(object):
         matches = re.match(r"(.+) \((.+)\)", line)
 
         name = matches.group(1)
-        version = matches.group(2)
+        version = matches.group(2).split('-')[0]
 
         archive_suffix = 'bz2'
         if self.package_url.endswith('gz'):
