@@ -7,3 +7,11 @@ export QT_SELECT := qt5
 override_dh_shlibdeps:
 	dh_shlibdeps -l$(shell pwd)/usr/lib
 
+override_dh_auto_configure:
+    dh_auto_configure -- \
+    -DCMAKE_C_COMPILER=`which clang-10` \
+    -DCMAKE_CXX_COMPILER=`which clang++-10` \
+    -DMVVM_DISCOVER_TESTS=OFF \
+    -DMVVM_ENABLE_FILESYSTEM=OFF \
+    -DMVVM_BUILD_EXAMPLES=OFF
+
