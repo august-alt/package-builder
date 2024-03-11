@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: qt-mvvm
 Upstream-Contact: august <august@basealt.ru>
-Source: <https://github.com/august-alt/qt-mvvm/archive/refs/tags/v0.2.0.tar.gz>
+Source: <https://github.com/august-alt/qt-mvvm/archive/refs/tags/0.2.0.tar.gz>
 
 Files: *
 Copyright: Copyright (©) 2020-2024  Gennady Pospelov, https://github.com/gpospelov
