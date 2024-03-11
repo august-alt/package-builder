@@ -1,0 +1,27 @@
+Source: qt-mvvm
+Maintainer: august <august@basealt.ru>
+Section: devel
+Priority: optional
+Build-Depends: debhelper (>= 9)               
+Standards-Version: 4.1.4
+Vcs-Browser: https://github.com/august-alt/qt-mvvm
+Vcs-Git: git://git@github.com:august-alt/qt-mvvm.git
+Homepage: https://github.com/august-alt/qt-mvvm
+
+Package: qt-mvvm
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: 
+This model-view-viewmodel framework is intended for large Qt based scientific applications written in C++. 
+Project was created as a playground toward GUI refactoring of BornAgain project.
+Main features of the framework are:
+    Application model to store arbitrary data of GUI session.
+    Serialization of application models to json.
+    Undo/redo based on command pattern.
+    View model to show parts of application model in Qt widgets. Depends on Qt.
+    Scientific plotting based on qcustomplot.
+    Automatic generation of widgets from model content.
+    Property editors.
+    Flexible layout of Qt's trees and tables.
+
