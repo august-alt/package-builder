@@ -1,9 +1,13 @@
 qt-mvvm (0.2.0) unstable; urgency=medium
-  Fixes:
+
+  * Fixes:
     - Improve package desc    
     - Provide better separation between development and library packages.
+
 -- Vladimir Rubanov august@altlinux.org Wed Apr 06 2021 
 
 qt-mvvm (0.1.0) unstable; urgency=medium
-  Initial build
+
+  * Initial build
+
 -- Vladimir Rubanov august@altlinux.org Wed Apr 06 2021
