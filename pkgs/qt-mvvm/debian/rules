@@ -2,4 +2,8 @@
 export QT_SELECT := qt5
 
 %:
-    dh $@
+	dh $@ 
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l$(shell pwd)/usr/lib
+
