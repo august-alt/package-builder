@@ -24,4 +24,4 @@ jobs:
     - name: Run echo command in Docker container
       run: |
         docker run -i --log-driver=none -a stdin -a stdout -a stderr -v "$(pwd)":/app \
-        ghcr.io/august-alt/external-docker-images-astra_2.12_x86-64:latest python3 /app/tools/debian.py /app/pkgs/xsd/
+        ghcr.io/august-alt/external-docker-images-astra_2.12_x86-64:latest python3 /app/tools/debian.py /app/pkgs/qt-mvvm/
