@@ -1,4 +1,4 @@
-qt-mvvm (0.2.0) unstable; urgency=medium
+qt-mvvm (0.2.0-1) unstable; urgency=medium
 
   * Fixes:
     - Improve package desc    
@@ -6,7 +6,7 @@ qt-mvvm (0.2.0) unstable; urgency=medium
 
  -- Vladimir Rubanov <august@altlinux.org> Wed, Apr 06 2021 03:37:25 +0400
 
-qt-mvvm (0.1.0) unstable; urgency=medium
+qt-mvvm (0.1.0-1) unstable; urgency=medium
 
   * Initial build
 
