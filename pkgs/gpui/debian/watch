@@ -1,0 +1,3 @@
+version=0.2.42
+https://github.com/august-alt/gpui/tags .*/archive/[a-z](\d\S*)\.tar\.gz
+
