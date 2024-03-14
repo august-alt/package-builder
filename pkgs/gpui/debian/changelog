@@ -1,0 +1,6 @@
+gpui (0.2.42-1) unstable; urgency=medium
+
+  * Features:
+    - Add environment variables dialog to preferences.
+
+ -- Vladimir Rubanov <august@altlinux.org> Wed, Mar 6 2024 03:37:25 +0400
