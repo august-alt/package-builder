@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gpui
+Upstream-Contact: august <august@basealt.ru>
+Source: <https://github.com/august-alt/gpui/archive/refs/tags/0.2.42.tar.gz>
+
+Files: *
+Copyright: Copyright (©) 2020-2024  august@basealt.ru, https://github.com/august-alt
+License: GPL-2+
